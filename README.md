@@ -1,4 +1,4 @@
-# shwijs-physics @1.0.0
+# shwi-js-physics @1.0.0
 
 A physics extension for [shwi-js](https://www.npmjs.com/package/shwi-js)!
 
@@ -12,13 +12,13 @@ A physics extension for [shwi-js](https://www.npmjs.com/package/shwi-js)!
 ## Installation
 
 ```
-npm i shwijs-physics
+npm i shwi-js-physics
 ```
 
 ## Usage
 
 ```js
-const physics = require("shwijs-physics");
+const physics = require("shwi-js-physics");
 ```
 
 ## Angle
@@ -34,7 +34,7 @@ You can create angles now! It is pretty self explanatory, but:
 To create a new angle, just create a new instance with the value of the angle and the unit with it!
 
 ```js
-const { Angle } = require("shwijs-physics");
+const { Angle } = require("shwi-js-physics");
 const myAngle = new Angle(10, "deg");
 ```
 
@@ -47,7 +47,7 @@ Radians: Alias[rad, radian, radians] \
 Rotate this angle to a new angle! Just pass in another angle instance to rotate!
 
 ```js
-const { Angle } = require("shwijs-physics");
+const { Angle } = require("shwi-js-physics");
 const myAngle = new Angle(0, "deg");
 const angleToAdd = new Angle(10, "deg");
 myAngle.rotate(angleToAdd);
@@ -93,7 +93,7 @@ Create a new vector (position).
 Create a new vector with positions. (Defaults to `Vector.ORIGIN`)
 
 ```js
-const { Vector } = require("shwijs-physics");
+const { Vector } = require("shwi-js-physics");
 new Vector(0, 0);
 ```
 
@@ -110,7 +110,7 @@ Set this vector position to something else.
 Add another vector to this vector.
 
 ```js
-const { Vector } = require("shwijs-physics");
+const { Vector } = require("shwi-js-physics");
 const myVector = new Vector(0, 2);
 const vectorToAdd = new Vector(1, 5);
 myVector.add(vectorToAdd);
@@ -126,7 +126,7 @@ Subtract another vector from this vector. Similar to `Vector#add()`
 Add a resultant to this vector.
 
 ```js
-const { Vector, Angle } = require("shwijs-physics");
+const { Vector, Angle } = require("shwi-js-physics");
 const myVector = new Vector(0, 0);
 myVector.addResultant(5, new Angle(53, "deg"));
 //=> myVector = 3, 4
@@ -149,7 +149,7 @@ Get the resultant value of this vector (without angle).
 Get the relative distance of the vector from origin.
 
 ```js
-const { Vector } = require("shwijs-physics");
+const { Vector } = require("shwi-js-physics");
 const myVector = new Vector(3, 4);
 console.log(myVector.distanceFromOrigin);
 //=> 5
@@ -158,7 +158,7 @@ console.log(myVector.distanceFromOrigin);
 If the origin is different, say:
 
 ```js
-const { Vector } = require("shwijs-physics");
+const { Vector } = require("shwi-js-physics");
 Vector.SetOrigin(1, 1);
 const myVector = new Vector(5, 12);
 console.log(myVector.distanceFromOrigin);
@@ -178,7 +178,7 @@ Get the absolute position of the vector, no matter what the origin. In above exa
 (Static) Check if the given vector components x and y are valid numbers.
 
 ```js
-const { Vector } = require("shwijs-physics");
+const { Vector } = require("shwi-js-physics");
 Vector.CheckIfValidPos(0, 0, (err) => {
 	if (err) return err.log();
 	// do your thing

@@ -1,5 +1,5 @@
 {
-	"name": "shwijs-physics",
+	"name": "shwi-js-physics",
 	"version": "1.0.1",
 	"description": "",
 	"main": "index.js",
@@ -8,7 +8,7 @@
 	},
 	"keywords": [],
 	"author": "shwi",
-	"license": "ISC",
+	"license": "Apache",
 	"dependencies": {
 		"shwi-js": "^1.0.0"
 	}
